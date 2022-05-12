@@ -12,7 +12,6 @@ Puede levantar el proyecto con visual studio code ejecutando comand + shift + P.
 
 Luego abre el archivo main.dart y presiona F5 o fn + F5 app. 
 
-<img src="https://github.com/eivanphils/flutter-app-counter/blob/master/assets/main.png" width="500">    
 
 **Nota**: es importante tener instalado todas las configuraciones necesarias para flutter
 
