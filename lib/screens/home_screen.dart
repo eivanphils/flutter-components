@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_components/screens/screens.dart';
+import 'package:flutter_components/router/app_routes.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final menuOptions = AppRoutes.menuOptions;
+
     return Scaffold(
         appBar: AppBar(
           title: const Text('Componentes de Flutter'),
         ),
         body: ListView.separated(
             itemBuilder: (context, index) => ListTile(
-                  leading: const Icon(Icons.analytics),
-                  title: const Text('Mi componente'),
+                  leading: Icon(menuOptions[index].icon),
+                  title: Text(menuOptions[index].name),
                   onTap: () {
                     // Armando la ruta completa
                     // final route = MaterialPageRoute(
@@ -23,13 +25,14 @@ class HomeScreen extends StatelessWidget {
 
                     // Navigator.push(context, route);
 
-                    Navigator.pushNamed(context, 'listview');
+                    Navigator.pushNamed(
+                        context, menuOptions[index].route);
 
                     // Borrar la ruta anterior del historial
                     // Navigator.pushReplacementNamed(context, 'listview');
                   },
                 ),
             separatorBuilder: (_, __) => const Divider(),
-            itemCount: 40));
+            itemCount: menuOptions.length));
   }
 }
