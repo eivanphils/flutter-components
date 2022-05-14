@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_components/theme/app_theme.dart';
 
 class ListViewScreen extends StatelessWidget {
   final options = const ['Megaman', 'Pokemon', 'Digimon', 'Dragon Ball Z'];
@@ -15,9 +16,9 @@ class ListViewScreen extends StatelessWidget {
           children: [
             ...options.map(
               (option) => ListTile(
-                leading: const Icon(Icons.access_time_filled),
+                leading: const Icon(Icons.access_time_filled, color: AppTheme.primaryColor,),
                 title: Text(option),
-                trailing: const Icon(Icons.ac_unit_rounded),
+                trailing: const Icon(Icons.ac_unit_rounded, color: AppTheme.primaryColor),
               )
             ).toList()
           ],
