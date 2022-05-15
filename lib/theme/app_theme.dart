@@ -11,7 +11,12 @@ class AppTheme {
     appBarTheme: const AppBarTheme(
       color: primaryColor,
       elevation: 0
-    )
+    ),
+
+    // TextButtons
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(primary: primaryColor)
+    ),
   );
 
   static ThemeData darkTheme = ThemeData.dark().copyWith(
