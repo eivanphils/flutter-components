@@ -25,26 +25,7 @@ class CardScreen extends StatelessWidget {
             subtitle: 'Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. 2',
             icon: Icons.lock_clock
           ),
-          CustomCard(
-            title: 'Titulo dentro del card 3',
-            subtitle: 'Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. 3',
-            icon: Icons.people_alt
-          ),
-          CustomCard(
-            title: 'Titulo dentro del card 4',
-            subtitle: 'Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. 3',
-            icon: Icons.people_alt
-          ),
-          CustomCard(
-            title: 'Titulo dentro del card 5',
-            subtitle: 'Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. 3',
-            icon: Icons.people_alt
-          ),
-          CustomCard(
-            title: 'Titulo dentro del card 6',
-            subtitle: 'Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. Est aute mollit aliquip pariatur adipisicing in. 3',
-            icon: Icons.people_alt
-          ),
+          CustomCardType2()
         ],
       )
     );
