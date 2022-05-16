@@ -13,6 +13,7 @@ class AppRoutes {
     MenuOption(route: 'card', name: 'Tarjetas - Card', screen: const CardScreen(), icon: Icons.credit_card),
     MenuOption(route: 'alert', name: 'Alertas', screen: const AlertScreen(), icon: Icons.add_alert_outlined),
     MenuOption(route: 'avatar', name: 'Avatar', screen: const AvatarScreen(), icon: Icons.person),
+    MenuOption(route: 'animated', name: 'Animated', screen: const AnimatedScreen(), icon: Icons.play_circle_fill_outlined),
   ];
 
   // static Map<String, Widget Function(BuildContext)> routes = {
