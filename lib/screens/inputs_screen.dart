@@ -14,6 +14,12 @@ class InputsScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Column(
               children: [
+                TextField(
+                  autofocus: true,
+                  onChanged: (value) {
+                    print(value);
+                  },
+                ),
                 TextFormField(
                   autofocus: true,
                   initialValue: 'Mi nombre',
