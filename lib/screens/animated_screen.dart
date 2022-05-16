@@ -39,7 +39,9 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
         title: const Text('Animated Widget'),
       ),
       body: Center(
-        child: Container(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 400),
+          curve: Curves.easeOutCubic,
           child: const Icon(Icons.animation, color: Colors.white,),
           width: _width,
           height: _height,
