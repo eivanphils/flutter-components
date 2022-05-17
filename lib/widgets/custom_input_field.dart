@@ -7,6 +7,8 @@ class CustomInputField extends StatelessWidget {
   final IconData? suffixIcon;
   final IconData? prefixIcon;
   final IconData? icon;
+  final TextInputType? keyboardType;
+  final bool obscureText;
 
   const CustomInputField({
     Key? key,
@@ -16,28 +18,31 @@ class CustomInputField extends StatelessWidget {
     this.suffixIcon,
     this.icon,
     this.prefixIcon,
+    this.keyboardType,
+    this.obscureText = false
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      autofocus: false,
-      initialValue: '',
-      maxLength: 15,
-      autocorrect: false,
-      textCapitalization: TextCapitalization.words,
-      onChanged: (value) {
-        print(value);
-      },
-      validator: (value) {
-        if (value == null) {
-          return 'El campo es obligatorio';
-        }
+        autofocus: false,
+        initialValue: '',
+        autocorrect: false,
+        textCapitalization: TextCapitalization.words,
+        onChanged: (value) {
+          print(value);
+        },
+        validator: (value) {
+          if (value == null) {
+            return 'El campo es obligatorio';
+          }
 
-        return value.length < 3 ? 'Minimo 3 caracteres' : null;
-      },
-      autovalidateMode: AutovalidateMode.onUserInteraction,
-      decoration: InputDecoration(
+          return value.length < 3 ? 'Minimo 3 caracteres' : null;
+        },
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        keyboardType: keyboardType,
+        obscureText: obscureText,
+        decoration: InputDecoration(
           hintText: hintText,
           labelText: labelText,
           floatingLabelBehavior: FloatingLabelBehavior.auto,
@@ -45,7 +50,6 @@ class CustomInputField extends StatelessWidget {
           prefixIcon: prefixIcon == null ? null : Icon(prefixIcon),
           suffixIcon: suffixIcon == null ? null : Icon(suffixIcon),
           icon: icon == null ? null : Icon(icon),
-      )
-    );
+        ));
   }
 }

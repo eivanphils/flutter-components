@@ -17,12 +17,12 @@ class InputsScreen extends StatelessWidget {
             child: Column(
               children: const [
                 CustomInputField(),
-                SizedBox(height: 10),
+                SizedBox(height: 20),
                 CustomInputField(
                   labelText: 'Nombre',
                   hintText: 'Nombre de usuario',
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 20),
                 CustomInputField(
                   labelText: 'Tarjeta',
                   hintText: 'Nro de tarjeta',
@@ -30,6 +30,15 @@ class InputsScreen extends StatelessWidget {
                   icon: Icons.card_giftcard,
                   suffixIcon: Icons.check,
                 ),
+                SizedBox(height: 20),
+                CustomInputField(
+                  labelText: 'Correo',
+                  hintText: 'Correo electronico',
+                  suffixIcon: Icons.mail,
+                  keyboardType: TextInputType.emailAddress,
+                ),
+                SizedBox(height: 20),
+                CustomInputField(labelText: 'Password', hintText: 'Password del usuario', obscureText: true)
               ],
             ),
           ),
