@@ -29,33 +29,50 @@ class InputsScreen extends StatelessWidget {
               key: myFormKey,
               child: Column(
                 children: [
-                  const CustomInputField(
-                      labelText: 'Nombre', hintText: 'Nombre de usuario'),
+                  CustomInputField(
+                    labelText: 'Nombre',
+                    hintText: 'Nombre de usuario',
+                    formValues: formValues,
+                    formProperty: 'name'
+                  ),
                   const SizedBox(height: 20),
-                  const CustomInputField(
-                      labelText: 'Tarjeta',
-                      hintText: 'Nro de tarjeta',
-                      helperText: 'Introduce el valor de tu tarjeta',
-                      icon: Icons.card_giftcard,
-                      suffixIcon: Icons.check),
+                  CustomInputField(
+                    labelText: 'Tarjeta',
+                    hintText: 'Nro de tarjeta',
+                    helperText: 'Introduce el valor de tu tarjeta',
+                    icon: Icons.card_giftcard,
+                    suffixIcon: Icons.check,
+                    keyboardType: TextInputType.number,
+                    formValues: formValues,
+                    formProperty: 'card_number'
+                  ),
                   const SizedBox(height: 20),
-                  const CustomInputField(
+                  CustomInputField(
                     labelText: 'Correo',
                     hintText: 'Correo electronico',
                     suffixIcon: Icons.mail,
                     keyboardType: TextInputType.emailAddress,
+                    formValues: formValues,
+                    formProperty: 'email'
+
                   ),
                   const SizedBox(height: 20),
-                  const CustomInputField(
-                      labelText: 'Password',
-                      hintText: 'Password del usuario',
-                      obscureText: true),
+                  CustomInputField(
+                    labelText: 'Password',
+                    hintText: 'Password del usuario',
+                    obscureText: true,
+                    formValues: formValues,
+                    formProperty: 'password'
+                  ),
                   const SizedBox(height: 20),
-                  const CustomInputField(
-                      labelText: 'Url',
-                      hintText: 'pagina web',
-                      obscureText: true,
-                      keyboardType: TextInputType.url),
+                  CustomInputField(
+                    labelText: 'Url',
+                    hintText: 'pagina web',
+                    obscureText: true,
+                    keyboardType: TextInputType.url,
+                    formValues: formValues,
+                    formProperty: 'website'
+                  ),
                   const SizedBox(height: 30),
                   ElevatedButton(
                     child: const SizedBox(

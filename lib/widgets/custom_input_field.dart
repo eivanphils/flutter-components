@@ -10,8 +10,11 @@ class CustomInputField extends StatelessWidget {
   final TextInputType? keyboardType;
   final bool obscureText;
 
-  const CustomInputField({
-    Key? key,
+  final String formProperty;
+  final Map<String, String> formValues;
+
+  const CustomInputField(
+    {Key? key,
     this.labelText,
     this.hintText,
     this.helperText,
@@ -19,8 +22,10 @@ class CustomInputField extends StatelessWidget {
     this.icon,
     this.prefixIcon,
     this.keyboardType,
-    this.obscureText = false
-  }) : super(key: key);
+    this.obscureText = false,
+    required this.formProperty,
+    required this.formValues}
+  ) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +34,7 @@ class CustomInputField extends StatelessWidget {
         initialValue: '',
         autocorrect: false,
         textCapitalization: TextCapitalization.words,
-        onChanged: (value) {
-          print(value);
-        },
+        onChanged: (value) => formValues[formProperty] = value,
         validator: (value) {
           if (value == null) {
             return 'El campo es obligatorio';
