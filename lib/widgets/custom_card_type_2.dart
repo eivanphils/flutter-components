@@ -19,7 +19,7 @@ class CustomCardType2 extends StatelessWidget {
         borderRadius: BorderRadius.circular(18)
       ),
       elevation: 20,
-      shadowColor: AppTheme.primaryColor.withOpacity(0.8),
+      shadowColor: AppTheme.primary.withOpacity(0.8),
       child: Column(
         children: [
           // Una manera de agregar la imagen

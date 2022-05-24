@@ -17,9 +17,9 @@ class ListView2Screen extends StatelessWidget {
             itemCount: options.length,
             itemBuilder: (context, index) {
               return ListTile(
-                leading: const Icon(Icons.access_time_filled, color: AppTheme.primaryColor),
+                leading: const Icon(Icons.access_time_filled, color: AppTheme.secondary),
                 title: Text(options[index]),
-                trailing: const Icon(Icons.ac_unit_rounded, color: Colors.red),
+                trailing: const Icon(Icons.ac_unit_rounded, color: AppTheme.primary),
                 onTap: () => print('tab $index'),
               );
             },

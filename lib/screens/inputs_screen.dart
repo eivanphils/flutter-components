@@ -15,30 +15,45 @@ class InputsScreen extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Column(
-              children: const [
-                CustomInputField(),
-                SizedBox(height: 20),
-                CustomInputField(
+              children: [
+                const CustomInputField(),
+                const SizedBox(height: 20),
+                const CustomInputField(
                   labelText: 'Nombre',
                   hintText: 'Nombre de usuario',
                 ),
-                SizedBox(height: 20),
-                CustomInputField(
+                const SizedBox(height: 20),
+                const CustomInputField(
                   labelText: 'Tarjeta',
                   hintText: 'Nro de tarjeta',
                   helperText: 'Introduce el valor de tu tarjeta',
                   icon: Icons.card_giftcard,
                   suffixIcon: Icons.check,
                 ),
-                SizedBox(height: 20),
-                CustomInputField(
+                const SizedBox(height: 20),
+                const CustomInputField(
                   labelText: 'Correo',
                   hintText: 'Correo electronico',
                   suffixIcon: Icons.mail,
                   keyboardType: TextInputType.emailAddress,
                 ),
-                SizedBox(height: 20),
-                CustomInputField(labelText: 'Password', hintText: 'Password del usuario', obscureText: true)
+                const SizedBox(height: 20),
+                const CustomInputField(labelText: 'Password', hintText: 'Password del usuario', obscureText: true),
+                const SizedBox(height: 20),
+                const CustomInputField(labelText: 'Url', hintText: 'pagina web', obscureText: true, keyboardType: TextInputType.url),
+                const SizedBox(height: 30),
+                ElevatedButton(
+                  child: const SizedBox(
+                    width: 330,
+                    height: 50,
+                    child: Center(
+                      child: Text('Guardar', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),)
+                    )
+                  ),
+                  onPressed: () {
+                    
+                  },
+                )
               ],
             ),
           ),

@@ -23,7 +23,7 @@ class CustomCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 10),
             child: ListTile(
-              leading: Icon(icon, color: AppTheme.primaryColor),
+              leading: Icon(icon, color: AppTheme.secondary),
               title: Text(title),
               subtitle: Text(subtitle),
             ),
@@ -35,7 +35,7 @@ class CustomCard extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {},
-                  child: const Text('Cancel')
+                  child: const Text('Cancel', style: TextStyle(color: AppTheme.secondary))
                 ),
                 TextButton(
                   onPressed: () {},

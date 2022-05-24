@@ -16,9 +16,9 @@ class ListViewScreen extends StatelessWidget {
           children: [
             ...options.map(
               (option) => ListTile(
-                leading: const Icon(Icons.access_time_filled, color: AppTheme.primaryColor,),
+                leading: const Icon(Icons.access_time_filled, color: AppTheme.primary,),
                 title: Text(option),
-                trailing: const Icon(Icons.ac_unit_rounded, color: AppTheme.primaryColor),
+                trailing: const Icon(Icons.ac_unit_rounded, color: AppTheme.primary2),
               )
             ).toList()
           ],
