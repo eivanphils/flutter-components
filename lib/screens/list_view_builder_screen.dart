@@ -58,6 +58,15 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
     setState(() {});
   }
 
+  Future<void> _onRefresh() async {
+    await Future.delayed(const Duration(seconds: 2));
+
+    final lastId = imagesId.last;
+    imagesId.clear();
+    imagesId.add(lastId + 1);
+    loadPhotos();
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -70,20 +79,25 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
         context: context,
         child: Stack(
           children: [
-            ListView.builder(
-              controller: scrollController,
-              itemCount: imagesId.length,
-              itemBuilder: (BuildContext context, int index) {
-                return FadeInImage(
-                  placeholder: const AssetImage('assets/jar-loading.gif'),
-                  image: NetworkImage(
-                      'https://picsum.photos/500/300?image=${imagesId[index]}'),
-                  width: double.infinity,
-                  height: 300,
-                  fit: BoxFit.cover,
-                  fadeInDuration: const Duration(milliseconds: 300),
-                );
-              },
+            RefreshIndicator(
+              onRefresh: _onRefresh,
+              backgroundColor: Colors.white.withOpacity(0.8),
+              color: AppTheme.primary,
+              child: ListView.builder(
+                controller: scrollController,
+                itemCount: imagesId.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return FadeInImage(
+                    placeholder: const AssetImage('assets/jar-loading.gif'),
+                    image: NetworkImage(
+                        'https://picsum.photos/500/300?image=${imagesId[index]}'),
+                    width: double.infinity,
+                    height: 300,
+                    fit: BoxFit.cover,
+                    fadeInDuration: const Duration(milliseconds: 300),
+                  );
+                },
+              ),
             ),
 
             // * One way to show/hide a widget
