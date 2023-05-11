@@ -18,6 +18,7 @@ class AppRoutes {
     MenuOption(route: 'inputs', name: 'Inputs - Forms', screen: const InputsScreen(), icon: Icons.input_rounded),
     MenuOption(route: 'slides', name: 'Slides & Checks', screen: const SlidesScreen(), icon: Icons.check),
     MenuOption(route: 'list-view-builder', name: 'ListViewBuilder', screen: const ListViewBuilderScreen(), icon: Icons.list_alt),
+    MenuOption(route: 'fade-in-on-widget', name: 'FadeInOnWidget', screen: const FadeInOnWidgetScreen(), icon: Icons.widgets),
   ];
 
   // static Map<String, Widget Function(BuildContext)> routes = {
