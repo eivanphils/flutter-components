@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_components/theme/app_theme.dart';
 
 class AlertScreen extends StatelessWidget {
    

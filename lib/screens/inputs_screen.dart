@@ -83,7 +83,6 @@ class InputsScreen extends StatelessWidget {
                             value: value, child: Text(value));
                       }).toList(),
                       onChanged: (value) {
-                        print(value);
                         formValues['role'] = value ?? 'Admin';
                       }),
                   const SizedBox(height: 30),
@@ -102,10 +101,8 @@ class InputsScreen extends StatelessWidget {
                       FocusManager.instance.primaryFocus?.unfocus();
 
                       if (!myFormKey.currentState!.validate()) {
-                        print('formulario no valido');
                         return;
                       }
-                      print(formValues);
                     },
                   )
                 ],

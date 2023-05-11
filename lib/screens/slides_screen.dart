@@ -30,7 +30,6 @@ class _SlidesScreenState extends State<SlidesScreen> {
             inactiveColor: AppTheme.primary.withOpacity(0.3),
             onChanged: _sliderEnabled
             ? (double value) {
-                print(value);
                 _sliderValue = value;
                 setState(() {});
               }

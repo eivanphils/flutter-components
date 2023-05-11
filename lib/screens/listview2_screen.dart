@@ -20,7 +20,7 @@ class ListView2Screen extends StatelessWidget {
                 leading: const Icon(Icons.access_time_filled, color: AppTheme.secondary),
                 title: Text(options[index]),
                 trailing: const Icon(Icons.ac_unit_rounded, color: AppTheme.primary),
-                onTap: () => print('tab $index'),
+                onTap: null,
               );
             },
             separatorBuilder: (_, __) => const Divider()));
