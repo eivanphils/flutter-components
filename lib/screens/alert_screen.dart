@@ -104,9 +104,9 @@ class ContentDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisSize: MainAxisSize.min,
-      children: const [
+      children: [
         Text('mi cuerpo'),
         SizedBox(height: 10),
         FlutterLogo(size: 100)
