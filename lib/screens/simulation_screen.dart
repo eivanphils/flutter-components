@@ -84,15 +84,11 @@ class _DraggablecardState extends State<Draggablecard>
       onPanDown: (details) => _controller.stop(),
       onPanUpdate: (details) {
         setState(() {
-          print('_dragAlignment 1 $_dragAlignment');
           _dragAlignment += Alignment(
             details.delta.dx / (size.width / 2),
             details.delta.dy / (size.width / 2),
           );
 
-          print('_dragAlignment 2 $_dragAlignment');
-          print('details.delta.dx => ${details.delta.dx}');
-          print('details.delta.dy => ${details.delta.dy}');
         });
       },
       onPanEnd: (details) => _runAnimation(details.velocity.pixelsPerSecond, size),

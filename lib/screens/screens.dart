@@ -8,5 +8,6 @@ export 'package:flutter_components/screens/inputs_screen.dart';
 export 'package:flutter_components/screens/list_view_builder_screen.dart';
 export 'package:flutter_components/screens/listview1_screen.dart';
 export 'package:flutter_components/screens/listview2_screen.dart';
-export 'package:flutter_components/screens/physics%20_simulation_screen.dart';
+export 'package:flutter_components/screens/simulation_screen.dart';
 export 'package:flutter_components/screens/slides_screen.dart';
+export 'package:flutter_components/screens/snackbar_screen.dart';

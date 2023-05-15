@@ -19,7 +19,8 @@ class AppRoutes {
     MenuOption(route: 'slides', name: 'Slides & Checks', screen: const SlidesScreen(), icon: Icons.check),
     MenuOption(route: 'list-view-builder', name: 'ListViewBuilder', screen: const ListViewBuilderScreen(), icon: Icons.list_alt),
     MenuOption(route: 'fade-in-on-widget', name: 'FadeInOnWidget', screen: const FadeInOnWidgetScreen(), icon: Icons.widgets),
-    MenuOption(route: 'physics-simulation', name: 'PhysicsSimulation', screen: const PhysicsSimulationScreen(), icon: Icons.animation)
+    MenuOption(route: 'physics-simulation', name: 'PhysicsSimulation', screen: const PhysicsSimulationScreen(), icon: Icons.animation),
+    MenuOption(route: 'snackbar', name: 'SnackBar', screen: const SnackBarScreen(), icon: Icons.message)
   ];
 
   // static Map<String, Widget Function(BuildContext)> routes = {
