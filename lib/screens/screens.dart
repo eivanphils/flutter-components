@@ -11,4 +11,5 @@ export 'package:flutter_components/screens/listview2_screen.dart';
 export 'package:flutter_components/screens/simulation_screen.dart';
 export 'package:flutter_components/screens/slides_screen.dart';
 export 'package:flutter_components/screens/snackbar_screen.dart';
+export 'package:flutter_components/screens/tabs_screen.dart';
 export 'package:flutter_components/screens/ui_orientation_screen.dart';

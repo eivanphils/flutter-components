@@ -21,7 +21,8 @@ class AppRoutes {
     MenuOption(route: 'fade-in-on-widget', name: 'FadeInOnWidget', screen: const FadeInOnWidgetScreen(), icon: Icons.widgets),
     MenuOption(route: 'physics-simulation', name: 'PhysicsSimulation', screen: const PhysicsSimulationScreen(), icon: Icons.animation),
     MenuOption(route: 'snackbar', name: 'SnackBar', screen: const SnackBarScreen(), icon: Icons.message),
-    MenuOption(route: 'ui-orientation', name: 'UiOrientation', screen: const UiOrientationScreen(), icon: Icons.grid_4x4)
+    MenuOption(route: 'ui-orientation', name: 'UiOrientation', screen: const UiOrientationScreen(), icon: Icons.grid_4x4),
+    MenuOption(route: 'tabs', name: 'Tabs', screen: const TabsScreen(), icon: Icons.tab_sharp)
   ];
 
   // static Map<String, Widget Function(BuildContext)> routes = {
