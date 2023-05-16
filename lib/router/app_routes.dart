@@ -20,7 +20,8 @@ class AppRoutes {
     MenuOption(route: 'list-view-builder', name: 'ListViewBuilder', screen: const ListViewBuilderScreen(), icon: Icons.list_alt),
     MenuOption(route: 'fade-in-on-widget', name: 'FadeInOnWidget', screen: const FadeInOnWidgetScreen(), icon: Icons.widgets),
     MenuOption(route: 'physics-simulation', name: 'PhysicsSimulation', screen: const PhysicsSimulationScreen(), icon: Icons.animation),
-    MenuOption(route: 'snackbar', name: 'SnackBar', screen: const SnackBarScreen(), icon: Icons.message)
+    MenuOption(route: 'snackbar', name: 'SnackBar', screen: const SnackBarScreen(), icon: Icons.message),
+    MenuOption(route: 'ui-orientation', name: 'UiOrientation', screen: const UiOrientationScreen(), icon: Icons.grid_4x4)
   ];
 
   // static Map<String, Widget Function(BuildContext)> routes = {
